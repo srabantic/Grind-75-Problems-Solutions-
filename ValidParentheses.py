@@ -19,4 +19,4 @@ def isValid(self, s: str) -> bool:
                 stack.append(bracket)
             elif (len(stack) == 0 or bracket != pairs[stack.pop()]):
                 return False
-            return len(stack) == 0
+        return len(stack) == 0
