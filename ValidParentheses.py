@@ -14,7 +14,6 @@ def isValid(self, s: str) -> bool:
             '{' : '}', 
             '[' : ']'
             }
-        }
         for bracket in s:
             if bracket in pairs:
                 stack.append(bracket)
