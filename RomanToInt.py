@@ -35,7 +35,13 @@ Example 3:
 Input: s = "MCMXCIV"
 Output: 1994
 Explanation: M = 1000, CM = 900, XC = 90 and IV = 4.
- 
+
+
+NOTE: 
+    Roman numerals are usually written largest to smallest from left to right, so if there is any case which
+    does not follow this, we would need to encounter for those cases. 
+    Time Complexity : O(n)
+    Space Complexity : O(1), we are using a hashmap but that is just to store 7(constant) key,value pairs.
 """
 class Solution:
     def romanToInt(self, s: str) -> int:
