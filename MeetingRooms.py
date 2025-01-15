@@ -17,7 +17,7 @@ Note:
         Syntax: sorted(iterable, key=lambda x: <expression>)
     Difference betweeb sort and sorted in python
         - sort is only used for lists, sort perfoms in place sorting and mutates the original list, reduces use of extrs memory, reduces space complexity.
-        - sorted can be used for varietyof iterals, lists, tuples, sets etc. It returns a new list, so does not mutate the original list and has a bigger space complexity.
+        - sorted can be used for variety of iterals, lists, tuples, sets etc. It returns a new list, so does not mutate the original list and has a bigger space complexity.
         - However, both soting functions have a time complexity of O(n log n) - worst case.
 
 """
