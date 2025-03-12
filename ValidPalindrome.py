@@ -24,3 +24,30 @@ def isPalindrome(self, s: str) -> bool:
             j = j - 1
 
         return (forward_string == backward_string)
+### the above solution is correct but it uses extra time and memory because 
+## we are using string concatination and in python strings are immutable. 
+# So, everytime, we contatinate the string, it creates a new string.
+
+"""
+The solution below uses two pointers and has time complexity O(n) and 
+space compleixity O(1)
+"""
+def isPalindrome2(s: str) -> bool:
+    i = 0
+    j = len(s) - 1
+
+    while i < j:
+        while i < j and not s[i].isalnum():
+            i += 1
+        while i < j and not s[j].isalnum():
+            j -= 1
+        if (s[i].lower() != s[j].lower()):
+            return False
+        i += 1
+        j -= 1
+    return True
+
+s = "A man, a plan, a canal: Panama"
+print(isPalindrome(s))
+t = "A am a cat"
+print(isPalindrome(t))
