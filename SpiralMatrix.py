@@ -30,6 +30,11 @@ class Solution:
                 result.append(matrix[i][right - 1])
             right -= 1
 
+            # to tacke for conditions when left < right but top and bottom are equal 
+            # An example could be a n*m matric where n < m
+            if not(left < right and top < bottom):  
+                break
+
             # bottom right to left 
             for i in range(right - 1, left - 1, -1):
                 result.append(matrix[bottom - 1][i])
@@ -44,4 +49,6 @@ class Solution:
 
 solution = Solution()
 matrix = [[1,2,3],[4,5,6],[7,8,9]]
+print(solution.spiralOrder(matrix))
+matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
 print(solution.spiralOrder(matrix))
