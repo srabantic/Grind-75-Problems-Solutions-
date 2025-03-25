@@ -21,7 +21,7 @@ def search(self, nums: List[int], target: int) -> int:
         ## Implementation with O(log n) time complexity
         start, end = 0, len(nums) -  1
         while start <= end:
-            mid = start + (end - start) // 2
+            mid = start + (end - start) // 2  ## we do (end-start) to prevent integer overflow
             if (nums[mid] == target):
                 return mid 
             elif (nums[mid] > target):
