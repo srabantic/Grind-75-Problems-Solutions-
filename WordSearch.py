@@ -40,7 +40,7 @@ class Solution(object):
             if (i == len(word)):
                 return True
             
-            if (r < 0 or c < 0 or r >= rows or c >= cols or board[r][c] != word[i]):
+            if (r < 0 or c < 0 or r >= rows or c >= cols or board[r][c] != word[i] or (r, c) in visited):
                 return False
             
             visited.add((r, c))
@@ -62,6 +62,7 @@ class Solution(object):
 
 board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]]
 word = "ABCCED"
+word2 = "ABCB"
 
 solution = Solution()
-print(solution.exist(board, word))
+print(solution.exist(board, word2))
